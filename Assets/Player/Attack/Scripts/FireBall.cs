@@ -45,6 +45,5 @@ public class FireBall : MonoBehaviour
         {
             enemy_health.hp_value -= damage;
         }
-
     }
 }

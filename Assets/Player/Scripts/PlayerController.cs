@@ -66,12 +66,4 @@ public class PlayerController : MonoBehaviour
             _VectorMove -= transform.forward;
         }
     }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Respawn")
-        {
-            Application.LoadLevel("Level");
-        }
-    }
 }
