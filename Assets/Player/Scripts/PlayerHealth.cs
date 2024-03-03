@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void DealDamage()
     {
-        hp -= 1;
+        hp -= 15 * Time.deltaTime;
         if (hp <= 0)
         {
             OnDead();
