@@ -289,7 +289,7 @@ MonoBehaviour:
   WinePrefab: {fileID: 8279581546261335702, guid: f3349d4a30edd464691cc83b9e065664,
     type: 3}
   WineSource: {fileID: 7814839898516218537}
-  force: 500
+  force: 555
 --- !u!114 &6718257113141413137
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class WineCaster : MonoBehaviour
 {
     public Rigidbody WinePrefab;
     public Transform WineSource;
-    public float force = 500;
+    public float force = 555f;
     void Start()
     {
         
