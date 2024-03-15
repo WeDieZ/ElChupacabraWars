@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float hp_value = 15;
+    public float hp_value = 30;
     void Start()
     {
         
@@ -16,7 +16,4 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    //zzz//
-
 }

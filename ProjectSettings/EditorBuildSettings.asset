@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: df1b73866eb751043a342c8250158988
+  - enabled: 1
+    path: Assets/Scenes/ChoosePlayer.unity
+    guid: fd92923eea22eda49b4756f97881c088
+  - enabled: 1
+    path: Assets/Scenes/Level_Burger.unity
+    guid: 6fa772005d815384b81d73b7fef855be
+  - enabled: 1
+    path: Assets/Scenes/Level_Wine.unity
+    guid: 8e681bbafbbff924a9cd7a47928a22e6
   m_configObjects: {}
