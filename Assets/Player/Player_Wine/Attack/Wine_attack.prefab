@@ -4894,8 +4894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab49b6af8ec4bda4fb0816bc3392d804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KUBOOMeffect: {fileID: 2768682482012311608}
-  boink: {fileID: 4774512140563346393}
+  bottle: {fileID: 4774512140563346393}
   delay: 3
   ExplosionPrefab: {fileID: 2146153933805593719, guid: f59f353bf8da47e44b20aa16c7170524,
     type: 3}
@@ -4909,7 +4908,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b3228b669d78cf34f840a696733661c7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1f05177c71d9721469cea7844d17fd71, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Wine_Attack : MonoBehaviour
 {
-    public AudioSource boink;
+    public AudioSource bottle;
     public float delay = 3;
     public GameObject ExplosionPrefab;
     private void OnCollisionEnter(Collision collision)
     {
         Invoke("Explosion", delay);
-        boink.Play();
+        bottle.Play();
     }
 
     private void Explosion()
