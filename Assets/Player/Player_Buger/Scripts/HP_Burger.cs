@@ -11,6 +11,7 @@ public class HP_Burger : MonoBehaviour
     public GameObject OnGameUI;
     public GameObject OffGameUI;
     public GameObject HealEffect;
+    public GameObject Win;
 
     void Start()
     {
@@ -21,6 +22,14 @@ public class HP_Burger : MonoBehaviour
 
     void Update()
     {
+        if (Win.active == true)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.R) && hp <= 0)
         {
             SceneManager.LoadScene("MainMenu");
@@ -47,10 +56,11 @@ public class HP_Burger : MonoBehaviour
             SceneManager.LoadScene("MainMenu");
         }
 
-        if (other.tag == "kuboom")
+        if (other.tag == "cheese")
         {
-            hp -= 30;
-            DrawHP();
+            Win.SetActive(true);
+            GetComponent<PlayerController>().enabled = false;
+            GetComponent<BurgerCaster>().enabled = false;
         }
     }
 

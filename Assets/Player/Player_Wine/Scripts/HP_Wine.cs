@@ -11,6 +11,7 @@ public class HP_Wine : MonoBehaviour
     public GameObject OnGameUI;
     public GameObject OffGameUI;
     public GameObject HealEffect;
+    public GameObject Win;
 
     void Start()
     {
@@ -21,6 +22,14 @@ public class HP_Wine : MonoBehaviour
 
     void Update()
     {
+        if (Win.active == true)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+        }    
+
         if (Input.GetKeyDown(KeyCode.R) && hp <= 0)
         {
             SceneManager.LoadScene("MainMenu");
@@ -53,6 +62,19 @@ public class HP_Wine : MonoBehaviour
         if (other.tag == "Respawn")
         {
             SceneManager.LoadScene("MainMenu");
+        }
+
+        if (other.tag == "cheese")
+        {
+            Win.SetActive(true);
+            GetComponent<PlayerController>().enabled = false;
+            GetComponent<WineCaster>().enabled = false;
+        }
+
+        if (other.tag == "kuboom")
+        {
+            hp -= 30;
+            DrawHP();
         }
     }
 

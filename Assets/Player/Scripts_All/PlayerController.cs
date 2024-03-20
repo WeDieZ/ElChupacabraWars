@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     private float _fallVelocity = 0;
     private CharacterController _characterController;
     private Vector3 _VectorMove;
-
     void Start()
     {
         _characterController = GetComponent<CharacterController>();

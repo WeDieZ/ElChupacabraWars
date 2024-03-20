@@ -6,6 +6,10 @@ TagManager:
   tags:
   - fireball
   - kuboom
+  - bread
+  - steak
+  - tomato
+  - cheese
   layers:
   - Default
   - TransparentFX
