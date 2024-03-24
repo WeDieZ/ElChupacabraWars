@@ -40,10 +40,16 @@ public class Burger_Attack : MonoBehaviour
     private void DamageEnemy(Collision collision)
     {
         var enemy_health = collision.gameObject.GetComponent<EnemyHealth>();
+        var boss_health = collision.gameObject.GetComponent<BossHealth>();
 
         if (enemy_health != null)
         {
             enemy_health.hp_value -= damage;
         }
+
+        if (boss_health != null)
+        {
+            boss_health.hp_value -= damage;
+        }    
     }
 }

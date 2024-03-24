@@ -22,15 +22,12 @@ public class HP_Wine : MonoBehaviour
 
     void Update()
     {
-        if (Win.active == true)
-        {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                SceneManager.LoadScene("MainMenu");
-            }
-        }    
-
         if (Input.GetKeyDown(KeyCode.R) && hp <= 0)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
+        if (Win.active == true && Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("MainMenu");
         }
@@ -40,6 +37,12 @@ public class HP_Wine : MonoBehaviour
             OnDead();
         }
 
+        if (Win.active == true)
+        {
+            OnGameUI.SetActive(false);
+            GetComponent<PlayerController>().enabled = false;
+            GetComponent<WineCaster>().enabled = false;
+        }
     }
 
     public void DealDamage()
@@ -62,13 +65,6 @@ public class HP_Wine : MonoBehaviour
         if (other.tag == "Respawn")
         {
             SceneManager.LoadScene("MainMenu");
-        }
-
-        if (other.tag == "cheese")
-        {
-            Win.SetActive(true);
-            GetComponent<PlayerController>().enabled = false;
-            GetComponent<WineCaster>().enabled = false;
         }
 
         if (other.tag == "kuboom")

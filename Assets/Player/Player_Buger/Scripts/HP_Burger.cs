@@ -12,7 +12,6 @@ public class HP_Burger : MonoBehaviour
     public GameObject OffGameUI;
     public GameObject HealEffect;
     public GameObject Win;
-
     void Start()
     {
         _maxValue = hp;
@@ -22,15 +21,12 @@ public class HP_Burger : MonoBehaviour
 
     void Update()
     {
-        if (Win.active == true)
+        if (Input.GetKeyDown(KeyCode.R) && hp <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                SceneManager.LoadScene("MainMenu");
-            }
+            SceneManager.LoadScene("MainMenu");
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && hp <= 0)
+        if (Input.GetKeyDown(KeyCode.R) && Win.active == true)
         {
             SceneManager.LoadScene("MainMenu");
         }
@@ -38,6 +34,13 @@ public class HP_Burger : MonoBehaviour
         if (hp <= 0)
         {
             OnDead();
+        }
+
+        if (Win.active == true)
+        {
+            OnGameUI.SetActive(false);
+            GetComponent<PlayerController>().enabled = false;
+            GetComponent<BurgerCaster>().enabled = false;
         }
 
     }
@@ -49,18 +52,18 @@ public class HP_Burger : MonoBehaviour
         DrawHP();
     }
 
+    public void DealDamageBoss()
+    {
+        hp -= 25 * Time.deltaTime;
+
+        DrawHP();
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Respawn")
         {
             SceneManager.LoadScene("MainMenu");
-        }
-
-        if (other.tag == "cheese")
-        {
-            Win.SetActive(true);
-            GetComponent<PlayerController>().enabled = false;
-            GetComponent<BurgerCaster>().enabled = false;
         }
     }
 

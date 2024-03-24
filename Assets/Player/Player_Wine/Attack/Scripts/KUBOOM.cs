@@ -23,15 +23,21 @@ public class KUBOOM : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var Wine_HP = other.GetComponent<HP_Wine>();
+        var Enemy_HP = other.GetComponent<EnemyHealth>();
+        var Boss_HP = other.GetComponent<BossHealth>();
         if (Wine_HP != null)
         {
             Wine_HP.DealDamageKuboom();
         }
 
-        var Enemy_HP = other.GetComponent<EnemyHealth>();
         if (Enemy_HP != null)
         {
             Enemy_HP.hp_value -= 10;
+        }
+
+        if (Boss_HP != null)
+        {
+            Boss_HP.hp_value -= 10;
         }
     }
 }
