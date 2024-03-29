@@ -212,6 +212,25 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &6350599346415754033
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412766024145072187}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 476268cc26e9f7a4da94599ce1be1273, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1629239623064941088
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +336,7 @@ MonoBehaviour:
   speed: 5
   jumpforce: 7.5
   gravity: 9.8
+  animator: {fileID: 6350599346415754033}
 --- !u!143 &2259204917369535804
 CharacterController:
   m_ObjectHideFlags: 0
@@ -478,11 +498,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e9d10ce789cc8434db694c58feab05ec, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 43ce81223ceda8f4aadac614da780a03, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6230,11 +6250,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041A\u0440\u0443\u0442\u043E! \u0425\u043E\u0447\u0435\u0448\u044C \u043F\u043E\u043F\u0440\u043E\u0431\u043E\u0432\u0430\u0442\u044C
-    \u0435\u0449\u0451 \u0440\u0430\u0437? \u041D\u0430\u0436\u043C\u0438 R, \u0447\u0442\u043E\u0431\u044B
-    \u0432\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F \u0432 \u0433\u043B\u0430\u0432\u043D\u043E\u0435
-    \u043C\u0435\u043D\u044E \u0438 \u0441\u044B\u0433\u0440\u0430\u0442\u044C \u0435\u0449\u0451
-    \u0440\u0430\u0437\u043E\u043A!"
+  m_text: "\u041A\u0440\u0443\u0442\u043E! \u041D\u0430\u0436\u043C\u0438 R, \u0447\u0442\u043E\u0431\u044B
+    \u0441\u044B\u0433\u0440\u0430\u0442\u044C \u0437\u0430\u043D\u043E\u0432\u043E!\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6375,6 +6392,12 @@ PrefabInstance:
 --- !u!4 &1788201293422537345 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fdba1c83ba3778f4688cf5b185b28103,
+    type: 3}
+  m_PrefabInstance: {fileID: 2259204918733000042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1412766024145072187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fdba1c83ba3778f4688cf5b185b28103,
     type: 3}
   m_PrefabInstance: {fileID: 2259204918733000042}
   m_PrefabAsset: {fileID: 0}
